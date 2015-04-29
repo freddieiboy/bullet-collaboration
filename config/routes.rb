@@ -2,6 +2,10 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
+  post 'twilio/voice' => 'twilio#voice'
+  post 'notifications/notify' => 'notifications#notify'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -79,4 +79,6 @@ Rails.application.configure do
 
   # Needed for Devise to work in Production -> Make sure to add the Heroku Data
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.middleware.use Rack::TwilioWebhookAuthentication, Rails.application.secrets.twilio_auth_token, '/voice'
 end

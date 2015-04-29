@@ -12,6 +12,7 @@ gem 'react-rails', '~> 1.0'
 gem 'devise', '~> 3.4.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'jbuilder', '~> 2.2.13'
+gem 'twilio-ruby'
 
 
 group :development, :test do
