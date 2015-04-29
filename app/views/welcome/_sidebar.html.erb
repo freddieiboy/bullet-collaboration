@@ -1,0 +1,44 @@
+ <!-- Sidebar -->
+	    <div id="sidebar-wrapper">
+	        <ul class="sidebar-nav">
+	            <li class="sidebar-brand">
+	                <a href="#">
+	                    bullet
+	                </a>
+	            </li>
+	            <!-- <li>
+	                <a href="#">Todos</a>
+	            </li> -->
+	           <!--  <li>
+	                <a href="#">Players</a>
+	            </li>
+	            <br>
+	            <li>
+	                <a href="#">F.A.Q.</a>
+	            </li> -->
+
+	            <% if user_signed_in? %>
+				  <li>
+				  	Welcome, <strong><%= current_user.email %></strong>
+				  </li>
+				  <li>
+	                <a href="#">Towns</a>
+	           	  </li>
+				  <li>
+				  	<%= link_to 'Your Account', edit_user_registration_path, :class => 'navbar-link' %>
+				  </li>
+				  <li>
+				  	<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+				  </li>
+				<% else %>
+				  <li>
+				  	<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+				  </li>
+				  <li>
+				   	<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+				  </li>
+				<% end %>
+
+	        </ul>
+	    </div>
+	    <!-- /#sidebar-wrapper -->
