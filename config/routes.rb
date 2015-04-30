@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   post 'twilio/voice' => 'twilio#voice'
-  post 'notifications/notify' => 'notifications#notify'
+  post 'notifications/create' => 'notifications#create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

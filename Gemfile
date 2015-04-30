@@ -13,7 +13,7 @@ gem 'devise', '~> 3.4.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'jbuilder', '~> 2.2.13'
 gem 'twilio-ruby'
-
+gem 'figaro', '~> 0.7'
 
 group :development, :test do
 	gem 'sqlite3'
