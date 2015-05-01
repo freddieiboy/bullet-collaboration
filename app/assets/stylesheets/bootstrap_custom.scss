@@ -1,1 +1,26 @@
 @import "bootstrap";
+
+h1, h2, h2, h3, h4, h5, h6 {
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+	color: #38FE28;
+}
+
+p, div {
+	font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+
+.sidebar-brand {
+	color: #38FE28;
+}
+
+.sidebar-font-color {
+	color: #38FE28;
+}
+
+.sidebar-nav li a {
+	color: #38FE28 !important;
+}
+
+.tagline {
+  margin-bottom: 38px;
+}
