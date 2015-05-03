@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+
   devise_for :users
   root 'welcome#index'
 
   post 'twilio/voice' => 'twilio#voice'
   post 'notifications/create' => 'notifications#create'
+  get 'towns/teleport' => 'towns#teleport'
+  post 'towns/silentHill' => 'towns#silentHill'
+  post 'towns/loudHill' => 'towns#loudHill'
+  # post 'towns/customMessage' => 'towns#customMessage'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
