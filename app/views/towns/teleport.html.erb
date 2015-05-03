@@ -12,21 +12,21 @@
           <p>Choose a button to alert your operator.</p>
 
           <div>
-            <li class="btn btn-default span9 btn-block">
+            <ul class="btn btn-default span9 btn-block">
               <%= link_to "Silent Hill", :action => "silentHill" %>
-            </li>
+            </ul>
 
-            <li class="btn btn-default span9 btn-block">
-              <%= button_to "Loud Hill", :action => "loudHill" %>
-            </li>
+            <ul class="btn btn-default span9 btn-block">
+              <%= link_to "Loud Hill", :action => "loudHill" %>
+            </ul>
 
             <h1>Sleep</h1>
             <p>Go to sleep msg to everyone in your server. (Experimental)</p>
 
             <div>
-              <li class="btn btn-default span9 btn-block">
-                <%= button_to "Go to Sleep!", :action => "gotosleep" %>
-              </li>
+              <ul class="btn btn-default span9 btn-block">
+                <%= link_to "Go to Sleep!", :action => "gotosleep" %>
+              </ul>
           </div>
 
         </div>
