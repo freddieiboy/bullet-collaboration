@@ -2,11 +2,8 @@ require 'twilio-ruby'
 
 class TownsController < ApplicationController
 
-	# def customMessage
-	# 	@client = Twilio::REST::Client.new
 
-	# 	puts @client.messages.get('SMXXXXXXXX').body
-	# end
+  skip_before_action :verify_authenticity_token
 
 	Twilio.configure do |config|
  		  config.account_sid = 'AC57b3e4757050faf347be594c087072ac'
@@ -21,6 +18,7 @@ class TownsController < ApplicationController
 		  to: '4159411497',
 		  body: '/tp ' + current_user.username + ' 100 10 100'
 		)
+  redirect_to '/towns/teleport'
   end
 
   def loudHill
@@ -31,7 +29,8 @@ class TownsController < ApplicationController
 		  to: '4159411497',
 		  body: '/tp ' + current_user.username + ' 200 20 200'
 		)
-  end
+   redirect_to '/towns/teleport'
+   end
 
   def gotosleep
     @client = Twilio::REST::Client.new
@@ -41,6 +40,7 @@ class TownsController < ApplicationController
         to: '4159411497',
         body: 'Go to sleep everyone! Or log out really quick.'
     )
+  redirect_to '/towns/teleport'
   end
 end
 
