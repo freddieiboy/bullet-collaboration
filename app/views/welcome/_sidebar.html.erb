@@ -1,47 +1,19 @@
  <!-- Sidebar -->
-	    <div id="sidebar-wrapper">
-	        <ul class="sidebar-nav sidebar-font-color">
-	            <li class="sidebar-brand">
-	                <h2 href="#">
-	                    Ahoy, OP
-	                </h1>
-	            </li>
-	            <!-- <li>
-	                <a href="#">Todos</a>
-	            </li> -->
-	           <!--  <li>
-	                <a href="#">Players</a>
-	            </li>
-	            <br>
-	            <li>
-	                <a href="#">F.A.Q.</a>
-	            </li> -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav sidebar-font-color">
+        <li class="sidebar-brand">
+          <h2><%= link_to "Ahoy, OP", towns_teleport_path %></h2>
+        </li>
+        <% if user_signed_in? %>
+        <li><h5 class="tagline">"What do you want?"</h5>
+        </li>
+        <li><%= link_to "Towns", towns_teleport_path %></li>
+        <li><%= link_to 'Your Account', edit_user_registration_path, :class => 'navbar-link' %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+      <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+        <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+      <% end %>
 
-	            <% if user_signed_in? %>
-				  <li>
-				  	<h5 class="tagline">
-				  		"What do you want?"
-
-				  	</h5>
-				  </li>
-				  <li>
-				  	<%= link_to "Towns", towns_teleport_path %>
-	           	  </li>
-				  <li>
-				  	<%= link_to 'Your Account', edit_user_registration_path, :class => 'navbar-link' %>
-				  </li>
-				  <li>
-				  	<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-				  </li>
-				<% else %>
-				  <li>
-				  	<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-				  </li>
-				  <li>
-				   	<%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-				  </li>
-				<% end %>
-
-	        </ul>
-	    </div>
-	    <!-- /#sidebar-wrapper -->
+    </ul>
+</div>

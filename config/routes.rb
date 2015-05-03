@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'towns/teleport' => 'towns#teleport'
   post 'towns/silentHill' => 'towns#silentHill'
   post 'towns/loudHill' => 'towns#loudHill'
+  post 'towns/gotosleep' => 'towns#gotosleep'
 
   # post 'towns/customMessage' => 'towns#customMessage'
 

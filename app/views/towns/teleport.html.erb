@@ -1,11 +1,50 @@
-<h1>Towns#teleport</h1>
-<p>Find me in app/views/towns/teleport.html.erb</p>
+<div id="wrapper">
 
-<div>
-	<li class="btn btn-default span9 btn-block">
-		<%= button_to "Silent Hill", :action => "silentHill" %>
-	</li>
-	<li class="btn btn-default span9 btn-block">
-	<%= link_to "Loud Hill", :action => "loudHill", :controller => "towns" %>
-	</li>
+  <%= render :partial => 'welcome/sidebar'%>
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <button href="#menu-toggle" class="btn btn-default" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+          <h1>Teleporation</h1>
+          <p>Choose a button to alert your operator.</p>
+
+          <div>
+            <li class="btn btn-default span9 btn-block">
+              <%= link_to "Silent Hill", :action => "silentHill" %>
+            </li>
+
+            <li class="btn btn-default span9 btn-block">
+              <%= button_to "Loud Hill", :action => "loudHill" %>
+            </li>
+
+            <h1>Sleep</h1>
+            <p>Go to sleep msg to everyone in your server. (Experimental)</p>
+
+            <div>
+              <li class="btn btn-default span9 btn-block">
+                <%= button_to "Go to Sleep!", :action => "gotosleep" %>
+              </li>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+
 </div>
+<!-- /#wrapper -->
+
+
+<!-- Menu Toggle Script -->
+<script>
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+  });
+</script>
+
+
