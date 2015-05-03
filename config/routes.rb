@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   post 'notifications/create' => 'notifications#create'
 
   get 'towns/teleport' => 'towns#teleport'
-  get 'towns/silentHill' => 'towns#silentHill'
-  get 'towns/loudHill' => 'towns#loudHill'
-  get 'towns/gotosleep' => 'towns#gotosleep'
+  post 'towns/silentHill' => 'towns#silentHill'
+  post 'towns/loudHill' => 'towns#loudHill'
+  post 'towns/gotosleep' => 'towns#gotosleep'
 
   # post 'towns/customMessage' => 'towns#customMessage'
 

@@ -11,23 +11,25 @@
           <h1>Teleporation</h1>
           <p>Choose a button to alert your operator.</p>
 
-          <div>
-            <ul class="btn btn-default span9 btn-block">
-              <%= link_to "Silent Hill", :action => "silentHill" %>
-            </ul>
 
-            <ul class="btn btn-default span9 btn-block">
-              <%= link_to "Loud Hill", :action => "loudHill" %>
-            </ul>
-
-            <h1>Sleep</h1>
-            <p>Go to sleep msg to everyone in your server. (Experimental)</p>
-
-            <div>
-              <ul class="btn btn-default span9 btn-block">
-                <%= link_to "Go to Sleep!", :action => "gotosleep" %>
+            <div class="teleport-buttons">
+              <ul>
+                <%= button_to "Silent Hill", :action => "silentHill", :class => "btn btn-default full-width-button" %>
               </ul>
-          </div>
+
+              <ul>
+                <%= button_to "Loud Hill", :action => "loudHill", :class => "btn btn-default full-width-button" %>
+              </ul>
+
+              <h1>Sleep</h1>
+              <p>Go to sleep msg to everyone in your server. (Experimental)</p>
+
+
+              <ul>
+                <%= button_to "Go to Sleep!", :action => "gotosleep", :class => "btn btn-default full-width-button" %>
+              </ul>
+            </div>
+
 
         </div>
       </div>

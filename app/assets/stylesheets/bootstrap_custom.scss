@@ -38,3 +38,47 @@ body {
   background-color: #000000 !important;
   color: #38FE28 !important;
 }
+
+.teleport-buttons > ul {
+  padding-left: 0px;
+  form {
+    text-align: center;
+    input {
+      background-color: black;
+      border: 1px solid;
+      display: block;
+      width: 100%;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      font-size: 26px;
+      :active {
+        background-color: #B00100;
+      }
+    }
+  }
+}
+
+.field {
+  input {
+    background-color: #38FE28;
+    border: 1px solid;
+    color: black;
+  }
+}
+
+.actions {
+  input {
+    background-color: black;
+    border: 1px solid;
+    margin-top: 15px;
+  }
+}
+
+.cancelAccount {
+  background-color: black;
+  border: 1px solid;
+}
+
+a {
+  color: #177910 !important;
+}
