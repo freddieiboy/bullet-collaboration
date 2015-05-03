@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 
   post 'twilio/voice' => 'twilio#voice'
   post 'notifications/create' => 'notifications#create'
+
   get 'towns/teleport' => 'towns#teleport'
   post 'towns/silentHill' => 'towns#silentHill'
   post 'towns/loudHill' => 'towns#loudHill'
+
   # post 'towns/customMessage' => 'towns#customMessage'
 
 

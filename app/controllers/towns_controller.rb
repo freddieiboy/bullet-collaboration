@@ -8,6 +8,11 @@ class TownsController < ApplicationController
 	# 	puts @client.messages.get('SMXXXXXXXX').body
 	# end
 
+	Twilio.configure do |config|
+ 		  config.account_sid = ENV['TWILIO_ACCOUNT_SID']
+ 		  config.auth_token = ENV['TWILIO_AUTH_TOKEN']
+ 	end
+
   def silentHill
   	@client = Twilio::REST::Client.new
 
