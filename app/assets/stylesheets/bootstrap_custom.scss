@@ -95,5 +95,7 @@ ul {
 
 .homescreen {
   margin-top: 25%;
-  transform: scale(1.5);
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Safari */
+  transform: scale(2);
 }
